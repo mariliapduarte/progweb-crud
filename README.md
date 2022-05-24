@@ -1,14 +1,16 @@
-# progweb-crud
- Programação PHP com SQL
+# Programação PHP com SQL
 
- Fabricantes: funções para o CRUD de dados 
- - lerFabricantes
- - inserirFabricantes
- - atualizarFabricantes
- - excluirFabricantes
+Fabricantes: funções para crud de dados
 
- Produtos: funções para crud de dados
- - lerProduto
- - inserirProduto
- - atualizarProduto
- - excluirProduto
+- lerFabricantes
+- inserirFabricante
+- lerUmFabricante
+- atualizarFabricante
+- excluirFabricante
+
+Produtos: funções para crud de dados
+- lerProdutos
+- inserirProduto
+- lerUmProduto
+- atualizarProduto
+- excluirProduto

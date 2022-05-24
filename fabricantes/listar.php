@@ -1,8 +1,7 @@
-<?php 
-require "..//includes/funcoes-fabricantes.php";
+<?php
+require "../includes/funcoes-fabricantes.php";
 $listaDeFabricantes = lerFabricantes($conexao);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,29 +24,32 @@ $listaDeFabricantes = lerFabricantes($conexao);
     <p><a href="inserir.php">Inserir</a></p>    
 
     <table>
-        <caption>Lista de Fabricantes </caption>
+        <caption> Lista de Fabricantes </caption>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Operação</th>
             </tr>
         </thead>
                 
         <tbody>
-    <?php foreach( $listaDeFabricantes as $fabricante) { ?>
 
-             <tr>
-                <td> <?= $fabricante["id"]?> </td>
-                <td> <?= $fabricante["nome"]?> </td>
+<?php 
+$contador = 1;
+foreach( $listaDeFabricantes as $fabricante ){ ?>        
+            <tr>
+                <td> <?=$contador.": ". $fabricante["nome"]?> </td>
                 <td> 
-                    <a href=""> Atualizar</a> - <a href=""> Excluir</a>
+<a href="atualizar.php?id=<?=$fabricante["id"]?>">Atualizar</a> 
+- <a href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a>
                 </td>
-             </tr>
+            </tr> 
+<?php 
+$contador++;
+} 
 
-    <?php } 
-    require "..//includes/desconecta.php"; //opcional
-    ?>
+require "../includes/desconecta.php"; // opcional
+?>
 
         </tbody>
 
