@@ -24,7 +24,7 @@ ON produtos.fabricante_id = fabricantes.id ORDER BY produto";
 }
 
 function inserirProduto($conexao, $nome, $preco, $quantidade, $descricao, $fabricanteId){
-    $sql = "INSERT INTO produtos(nome, preco, quantidade, descricao, fabricante_id) VALUES ('$nome', $preco, $quantidade, '$descricao', '$fabricanteId')";
+    $sql = "INSERT INTO produtos(nome, preco, quantidade, descricao, fabricante_id) VALUES ('$nome', $preco, $quantidade, '$descricao', $fabricanteId)";
     
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
@@ -43,17 +43,21 @@ function lerUmProduto($conexao, $id){
 
 
 
-function atualizarProduto($conexao, $id, $nome){
-    $sql = "UPDATE fabricantes SET nome = '$nome' WHERE id = $id";
+function atualizarProduto($conexao, $id, $nome, $preco, $quantidade, $descricao, $fabId){
+    $sql = "UPDATE produtos SET nome = '$nome', preco = $preco, quantidade = $quantidade, descricao= '$descricao', fabricante_id = $fabId
+    WHERE id = $id";
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 } // final atualizarFabricante
 
 
 function excluirProduto($conexao, $id) {
-    $sql = "DELETE FROM fabricantes WHERE id = $id";
+    $sql = "DELETE FROM produtos WHERE id = $id";
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
-
+function formataMoeda($valor){
+    return "R$ ".number_format($valor, 2, ",", ".");
+    // 5000.00 --> R$ 5.000,00
+}
 
 
