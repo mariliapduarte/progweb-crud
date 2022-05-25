@@ -4,8 +4,8 @@
 require "conecta.php";
 
 function lerProdutos($conexao){
-    $sql = "SELECT id, nome, preco, quantidade, descricao, fabricante_id
-    FROM produtos ORDER BY nome";
+   //$sql = "SELECT id, nome, preco, quantidade, descricao, fabricante_id
+    //FROM produtos ORDER BY nome";
 
 $sql = "SELECT produtos.id, produtos.nome AS produto, produtos.quantidade, 
 produtos.preco, produtos.descricao, fabricantes.nome AS fabricante

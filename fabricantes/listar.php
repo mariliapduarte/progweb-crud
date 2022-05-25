@@ -22,9 +22,6 @@ $listaDeFabricantes = lerFabricantes($conexao);
         <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../fabricantes/inserir.php">Inserir</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="../produtos/listar.php">Produtos</a>
       </li>
       <li class="nav-item">
@@ -35,8 +32,7 @@ $listaDeFabricantes = lerFabricantes($conexao);
 </nav>
 
 <div class="container">
-    <h1 class="display-4 text-center">Fabricantes | SELECT -
-    <a href="../index.php">Home</a> </h1>
+    <h1 class="display-4 text-center">Fabricantes | SELECT
 </div>
       
 
