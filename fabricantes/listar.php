@@ -12,8 +12,7 @@ $listaDeFabricantes = lerFabricantes($conexao);
 </head>
 <body class="container border border-warning shadow p-3 mb-5 bg-white rounded mt-2">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,13 +22,13 @@ $listaDeFabricantes = lerFabricantes($conexao);
         <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="../fabricantes/inserir.php">Inserir</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="../produtos/listar.php">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled"> - MeuBD -</a>
       </li>
     </ul>
   </div>
