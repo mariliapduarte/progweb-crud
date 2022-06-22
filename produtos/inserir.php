@@ -4,7 +4,7 @@ require '../includes/funcoes-produtos.php';
 $listaDeFabricantes = lerFabricantes($conexao);
 
 
-if(isset($POST['inserir'])) {
+if(isset($_POST['inserir'])) {
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     $preco = filter_input(INPUT_POST, 'preco', 
                                     FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
